@@ -1,0 +1,21 @@
+@       IN      SOA     ns1.prd.paas-abplatform.net. admin.prd.paas-abplatform.net. (
+                              1         ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+; name servers - NS records
+    IN      NS      ns1.prd.paas-abplatform.net.
+    IN      NS      ns2.prd.paas-abplatform.net.
+
+; name servers - A records
+ns1.prd.paas-abplatform.net.          IN      A       172.20.21.131
+ns2.prd.paas-abplatform.net.          IN      A       172.20.21.130
+
+; 172.20.21.0/24 - A records
+cattle.prd.paas-abplatform.net.        IN      A      172.20.21.16
+server-node-01.prd.paas-abplatform.net.        IN      A      172.20.21.26
+server-node-02.prd.paas-abplatform.net.        IN      A      172.20.21.27
+server-node-03.prd.paas-abplatform.net.        IN      A      172.20.21.126
+ops-node-03          IN         CNAME     ns1.prd.paas-abplatform.net.
+ops-node-04          IN         CNAME     ns1.prd.paas-abplatform.net.
